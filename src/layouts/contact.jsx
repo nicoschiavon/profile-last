@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -47,12 +49,10 @@ export default function Contact() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center">
           <h2 className="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
-            Get In Touch
+            {t.contact.title}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-xl mx-auto">
-            I'm currently open to new opportunities and collaborations. Feel
-            free to reach out if you have a project in mind or just want to
-            connect.
+            {t.contact.description}
           </p>
         </div>
         <div className="mt-12 bg-white dark:bg-[#15202b] rounded-xl p-6 md:p-10 shadow-md">
@@ -63,12 +63,12 @@ export default function Contact() {
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   htmlFor="name"
                 >
-                  Name
+                  {t.contact.name}
                 </label>
                 <input
                   className="w-full h-12 px-4 bg-gray-100 dark:bg-[#233648] text-gray-900 dark:text-white border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   id="name"
-                  placeholder="Your Name"
+                  placeholder={t.contact.namePlaceholder}
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
@@ -80,12 +80,12 @@ export default function Contact() {
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   htmlFor="email"
                 >
-                  Email
+                  {t.contact.email}
                 </label>
                 <input
                   className="w-full h-12 px-4 bg-gray-100 dark:bg-[#233648] text-gray-900 dark:text-white border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   id="email"
-                  placeholder="Your Email"
+                  placeholder={t.contact.emailPlaceholder}
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -98,12 +98,12 @@ export default function Contact() {
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 htmlFor="subject"
               >
-                Subject
+                {t.contact.subject}
               </label>
               <input
                 className="w-full h-12 px-4 bg-gray-100 dark:bg-[#233648] text-gray-900 dark:text-white border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 id="subject"
-                placeholder="What's this about?"
+                placeholder={t.contact.subjectPlaceholder}
                 type="text"
                 value={formData.subject}
                 onChange={handleChange}
@@ -115,12 +115,12 @@ export default function Contact() {
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 htmlFor="message"
               >
-                Message
+                {t.contact.message}
               </label>
               <textarea
                 className="w-full px-4 py-3 bg-gray-100 dark:bg-[#233648] text-gray-900 dark:text-white border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 id="message"
-                placeholder="Your message here..."
+                placeholder={t.contact.messagePlaceholder}
                 rows="5"
                 value={formData.message}
                 onChange={handleChange}
@@ -130,12 +130,12 @@ export default function Contact() {
 
             {status === "success" && (
               <p className="text-green-600 text-center font-medium">
-                Message sent successfully!
+                {t.contact.sendSuccess}
               </p>
             )}
             {status === "error" && (
               <p className="text-red-500 text-center font-medium">
-                Failed to send message. Please try again.
+                {t.contact.sendError}
               </p>
             )}
 
@@ -146,7 +146,7 @@ export default function Contact() {
                 disabled={status === "sending"}
               >
                 <span className="truncate">
-                  {status === "sending" ? "Sending..." : "Send Message"}
+                  {status === "sending" ? t.contact.sending : t.contact.send}
                 </span>
               </button>
             </div>
