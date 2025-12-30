@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <h2 className="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-6 pt-5">
-        Featured Projects
+        Proyectos Destacados
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         <div className="flex flex-col bg-white dark:bg-[#15202b] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
@@ -18,11 +18,11 @@ export default function Projects() {
           ></div>
           <div className="p-6 flex flex-col flex-grow">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              Project One Title
+              Título del Proyecto Uno
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 flex-grow">
-              A brief, one-sentence summary of the project's purpose and key
-              features.
+              Un breve resumen de una frase sobre el propósito y las
+              características clave del proyecto.
             </p>
             <div className="flex flex-wrap gap-2 mt-4">
               <span className="text-xs font-semibold text-primary bg-primary/20 px-2 py-1 rounded-full">
@@ -40,13 +40,13 @@ export default function Projects() {
                 <span className="material-symbols-outlined text-base">
                   visibility
                 </span>
-                View Live
+                Ver en Vivo
               </button>
               <button className="flex-1 flex items-center justify-center gap-2 h-10 px-4 bg-gray-200 text-gray-800 dark:bg-[#233648] dark:text-white text-sm font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-[#2f455c] transition-colors">
                 <span className="material-symbols-outlined text-base">
                   code
                 </span>
-                Source
+                Código
               </button>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function Projects() {
           ></div>
           <div className="p-6 flex flex-col flex-grow">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              Project Two Title
+              Título del Proyecto Dos
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 flex-grow">
               A brief, one-sentence summary of the project's purpose and key
@@ -106,7 +106,7 @@ export default function Projects() {
           ></div>
           <div className="p-6 flex flex-col flex-grow">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              Project Three Title
+              Título del Proyecto Tres
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 flex-grow">
               A brief, one-sentence summary of the project's purpose and key
