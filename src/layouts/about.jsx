@@ -6,7 +6,7 @@ export default function About() {
       <div className="flex flex-col md:flex-row gap-8 md:gap-12">
         <div className="flex-1">
           <h2 className="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">
-            About Me
+            ¿Quién soy?
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal pb-3">
             ¡Hola! Soy Nico Schiavón, un desarrollador Full-Stack con
